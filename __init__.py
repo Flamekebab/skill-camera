@@ -23,7 +23,7 @@ class WebcamSkill(MycroftSkill):
 
     def initialize(self):
         take_picture_intent = IntentBuilder("TakePictureIntent"). \
-            require("TakePictureIntent").build()
+            require("take_picture").build()
         self.register_intent(take_picture_intent, self.take_picture_intent)
 
     def take_picture_intent(self, message):
