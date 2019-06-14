@@ -20,6 +20,7 @@ class WebcamSkill(MycroftSkill):
     # The constructor of the skill, which calls Mycroft Skill's constructor
     def __init__(self):
         super(WebcamSkill, self).__init__(name="WebcamSkill")
+        self.sound_file = join(abspath(dirname(__file__)), 'camera.wav')
 
     def initialize(self):
         take_picture_intent = IntentBuilder("TakePictureIntent"). \
@@ -30,7 +31,7 @@ class WebcamSkill(MycroftSkill):
         self.speak_dialog("picture")
         sultan = Sultan()
         sultan.fswebcam("-r 640x480 ~/webcam/image.jpg").run()
-        play_wav("camera.wav")
+        play_wav(self.sound_file)
 
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality
