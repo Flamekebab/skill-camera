@@ -39,7 +39,7 @@ class WebcamSkill(MycroftSkill):
         play_wav(self.shutter_sound)
         #take the photo
         sultan = Sultan()
-        sultan.fswebcam("-r 640x480 ~/webcam/image.jpg").run()
+        sultan.fswebcam("-r 640x480 --no-banner ~/webcam/image.jpg").run()
         #Comment on having taken the photo:
         self.speak_dialog("picture")
 
