@@ -22,8 +22,9 @@ class WebcamSkill(MycroftSkill):
     # The constructor of the skill, which calls Mycroft Skill's constructor
     def __init__(self):
         super(WebcamSkill, self).__init__(name="WebcamSkill")
-        #Where's that sound file? There's that sound file!
-        self.sound_file = join(abspath(dirname(__file__)), 'camera.wav')
+        #Where's those sound files? There they are!
+        self.shutter_sound = join(abspath(dirname(__file__)), 'camera.wav')
+        self.ready_sound = join(abspath(dirname(__file__)), 'ready_tone.wav')
 
     def initialize(self):
         take_picture_intent = IntentBuilder("TakePictureIntent"). \
@@ -32,9 +33,9 @@ class WebcamSkill(MycroftSkill):
 
     def take_picture_intent(self, message):
         #It takes a moment for the command to be processed so probably best to prompt them!
-        self.speak_dialog("ready")
+        play_wav(self.ready_sound)
         #Play the shutter sound
-        play_wav(self.sound_file)
+        play_wav(self.shutter_sound)
         #take the photo
         sultan = Sultan()
         sultan.fswebcam("-r 640x480 ~/webcam/image.jpg").run()
