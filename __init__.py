@@ -33,11 +33,9 @@ class WebcamSkill(MycroftSkill):
     def take_picture_intent(self, message):
         #Play the shutter sound
 	play_wav(self.sound_file)
-
 	#take the photo
 	sultan = Sultan()
         sultan.fswebcam("-r 640x480 ~/webcam/image.jpg").run()
-
 	#Comment on having taken the photo:
 	self.speak_dialog("picture")
 
