@@ -1,7 +1,7 @@
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
-import mycroft.util.wait_while_speaking
+import mycroft.util
 from mycroft.util import play_wav, play_mp3
 from os.path import join, isfile, abspath, dirname
 
