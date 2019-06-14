@@ -1,15 +1,12 @@
 ## Camera skill
-[![Donate with Bitcoin](https://en.cryptobadges.io/badge/micro/1QJNhKM8tVv62XSUrST2vnaMXh5ADSyYP8)](https://en.cryptobadges.io/donate/1QJNhKM8tVv62XSUrST2vnaMXh5ADSyYP8)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/jarbasai)
-<span class="badge-patreon"><a href="https://www.patreon.com/jarbasAI" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
-[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/JarbasAl)
+In principle this should be a skill that allows the Mycroft Home AI to take a photo on command. How successful we are in making that happen remains to be seen...
 
-webcam for mycroft
+From original readme:
 
 ## Description
-take pictures with webcam, share image objects with other processes, send image file path in messagebus
+Take pictures with webcam, share image objects with other processes, send image file path in messagebus
 
-you should make this a priority skill, it is meant to be used by other skills
+You should make this a priority skill, it is meant to be used by other skills
 
 
 ## Examples
@@ -19,7 +16,7 @@ you should make this a priority skill, it is meant to be used by other skills
 
 ## Using webcam in other skills
 
-if you want to get a file path for the latest picture you can use the
+If you want to get a file path for the latest picture you can use the
 messagebus to get a file path
 
 

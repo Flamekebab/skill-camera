@@ -8,9 +8,9 @@ from os import makedirs
 import json
 
 try:
-    import cv2
-    from imutils.video import VideoStream
-    from shared_camera import Camera
+    # import cv2
+    # from imutils.video import VideoStream
+    # from shared_camera import Camera
     import yagmail
 except ImportError:
     # re-install yourself
@@ -19,7 +19,6 @@ except ImportError:
     msm.install_by_url("https://github.com/JarbasAl/skill-camera", True)
     # trigger reload
     msm.reload_skill("skill-camera")
-
 
 __author__ = 'jarbas'
 
