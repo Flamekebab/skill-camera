@@ -31,6 +31,8 @@ class WebcamSkill(MycroftSkill):
         self.register_intent(take_picture_intent, self.take_picture_intent)
 
     def take_picture_intent(self, message):
+        #It takes a moment for the command to be processed so probably best to prompt them!
+        self.speak_dialog("ready")
         #Play the shutter sound
         play_wav(self.sound_file)
         #take the photo
