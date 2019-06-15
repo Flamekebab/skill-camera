@@ -27,8 +27,7 @@ class WebcamSkill(MycroftSkill):
         self.shutter_sound = join(abspath(dirname(__file__)), 'camera.wav')
 
     def initialize(self):
-        take_picture_intent = IntentBuilder("TakePictureIntent"). \
-            require("take_picture").build()
+        take_picture_intent = IntentBuilder("TakePictureIntent").require("take_picture").build()
         self.register_intent(take_picture_intent, self.take_picture_intent)
 
     def take_picture_intent(self, message):
